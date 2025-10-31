@@ -1,138 +1,168 @@
-/* === RESET === */
+/* ========== GLOBAL ========== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
   background: #ffffff;
-  color: #2e2e2e;
-  line-height: 1.5;
+  color: #333;
 }
 
-/* === HEADER === */
+/* ========== HEADER ========== */
+
 header {
-  background: #43a047; /* зелений */
-  padding: 10px;
+  background: #ffffff;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
 }
 
 header img {
-  max-width: 160px;
-  height: auto;
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
-/* === HERO / MAIN BANNER === */
-.hero {
-  background: url("assets/banner.png") center center / cover no-repeat;
-  width: 100%;
-  min-height: 420px;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 30px 20px;
-  color: #fff;
-  text-shadow: 0 3px 6px rgba(0,0,0,0.6);
-}
-
-/* Banner text */
-.hero h1 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-
-/* Order Button */
-.btn {
-  background: #ff9800;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 18px;
+nav a {
   text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: 0.25s;
-}
-
-.btn:hover {
-  background: #e68900;
-}
-
-/* === SECTIONS === */
-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 26px;
-  color: #2f7d32;
-  margin-bottom: 12px;
-}
-
-section p {
+  margin-left: 20px;
   font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
 }
 
-/* === FOOTER === */
-footer {
-  background: #2e7d32;
-  padding: 12px;
+nav a:hover {
+  color: #e84118;
+}
+
+/* ========== HERO / BANNER ========== */
+
+#home {
+  margin-top: 90px;
+  text-align: center;
+  background: #f6f7fb;
+  padding: 40px 20px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+#home h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#home p {
+  font-size: 20px;
+  margin: 10px 0 25px;
+}
+
+.btn-main {
+  background: #e84118;
   color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  background: #c23616;
+}
+
+/* ========== SECTIONS ========== */
+
+section {
+  padding: 60px 5%;
+}
+
+/* ========== PRODUCTS ========== */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.product-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.btn-buy {
+  background: #4CAF50;
+  padding: 12px 22px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-buy:hover {
+  background: #3e8e41;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+  background: #f5f5f5;
+  padding: 30px 10px;
   text-align: center;
   font-size: 16px;
+  border-top: 1px solid #ddd;
 }
 
-/* === MOBILE === */
+/* ========== MOBILE FIXES ========== */
+
 @media (max-width: 768px) {
   header img {
-    max-width: 135px;
+    height: 45px;
   }
 
-  .hero {
-    height: 55vh;
-    min-height: 350px;
-    padding: 20px 15px;
-  }
-
-  .hero h1 {
-    font-size: 22px;
-  }
-
-  .hero p {
+  nav a {
     font-size: 16px;
+    margin-left: 10px;
   }
 
-  .btn {
-    font-size: 16px;
-    padding: 10px 18px;
+  #home h1 {
+    font-size: 26px;
   }
-}
 
-/* EXTRA SMALL PHONES */
-@media (max-width: 480px) {
-  .hero {
+  .hero-image {
     height: 50vh;
-    min-height: 300px;
-    padding: 15px;
-  }
-
-  .hero h1 {
-    font-size: 20px;
-  }
-
-  .hero p {
-    font-size: 15px;
   }
 }
