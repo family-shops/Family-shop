@@ -111,12 +111,17 @@ footer {
     font-size: 16px;
     margin-left: 12px;
   }
-  .hero {
-    height: 55vh;
-    min-height: 300px;
-    padding: 20px 15px;
-    background-position: center top;
-  }
+
+
+.hero {
+  height: 65vh;
+  min-height: 300px;
+  padding: 30px 15px 50px;
+  background-position: center top;
+}
+
+
+  
   section h2 {
     font-size: 24px;
   }
