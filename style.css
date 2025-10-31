@@ -9,64 +9,59 @@ body {
   font-family: Arial, sans-serif;
   background: #ffffff;
   color: #2e2e2e;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* === HEADER === */
 header {
-  background: #43a047; /* зелений еко */
+  background: #43a047; /* зелений */
   padding: 10px;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 header img {
-  max-width: 170px;
+  max-width: 160px;
   height: auto;
-  display: block;
 }
 
-/* === HERO (банер) === */
+/* === HERO / MAIN BANNER === */
 .hero {
   background: url("assets/banner.png") center center / cover no-repeat;
   width: 100%;
-  height: 70vh;
   min-height: 420px;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 30px 20px;
+  color: #fff;
   text-shadow: 0 3px 6px rgba(0,0,0,0.6);
 }
 
-/* Текст на банері */
+/* Banner text */
 .hero h1 {
   font-size: 28px;
   font-weight: bold;
-  color: #fff;
-  max-width: 90%;
   margin-bottom: 5px;
 }
 
 .hero p {
   font-size: 18px;
-  color: #fff;
-  max-width: 90%;
+  margin-bottom: 12px;
 }
 
-/* Кнопка */
+/* Order Button */
 .btn {
   background: #ff9800;
   color: #fff;
-  padding: 13px 24px;
-  border-radius: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
   font-size: 18px;
-  margin-top: 15px;
   text-decoration: none;
-  display: inline-block;
   font-weight: bold;
+  display: inline-block;
   transition: 0.25s;
 }
 
@@ -74,7 +69,7 @@ header img {
   background: #e68900;
 }
 
-/* === CONTENT BLOCKS === */
+/* === SECTIONS === */
 section {
   padding: 40px 20px;
   text-align: center;
@@ -84,13 +79,10 @@ section h2 {
   font-size: 26px;
   color: #2f7d32;
   margin-bottom: 12px;
-  font-weight: bold;
 }
 
 section p {
   font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 15px;
 }
 
 /* === FOOTER === */
@@ -102,21 +94,20 @@ footer {
   font-size: 16px;
 }
 
-/* === MOBILE VERSION === */
+/* === MOBILE === */
 @media (max-width: 768px) {
-
   header img {
-    max-width: 150px;
+    max-width: 135px;
   }
 
   .hero {
     height: 55vh;
-    min-height: 360px;
+    min-height: 350px;
     padding: 20px 15px;
   }
 
   .hero h1 {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .hero p {
@@ -129,11 +120,19 @@ footer {
   }
 }
 
-/* === VERY SMALL PHONES === */
+/* EXTRA SMALL PHONES */
 @media (max-width: 480px) {
   .hero {
     height: 50vh;
     min-height: 300px;
-    background-position: top center;
+    padding: 15px;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 15px;
   }
 }
