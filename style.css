@@ -3,7 +3,28 @@ body{font-family:Arial;margin:0;background:#f6fff4;}
 header{display:flex;justify-content:space-between;align-items:center;padding:15px;background:#e8f7e2;}
 .logo{height:60px;}
 nav a{margin:0 10px;text-decoration:none;color:#2d6a2e;font-weight:bold;}
-.hero{background:#9bd39b;padding:120px 20px;text-align:center;color:#fff;}
+
+.hero {
+  background: url("assets/banner.png") top center / contain no-repeat;
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-size: contain !important;
+    background-position: top center !important;
+    min-height: 400px;
+    padding-top: 30px;
+  }
+}
 .viber-btn{display:inline-block;padding:15px 30px;font-size:20px;background:#4CAF50;color:#fff;text-decoration:none;border-radius:10px;font-weight:bold;}
 #products,#contact{padding:40px 20px;}
 footer{text-align:center;padding:15px;background:#e8f7e2;margin-top:20px;}
