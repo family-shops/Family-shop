@@ -23,17 +23,20 @@ header {
 }
 
 /* Hero Banner — ✅ FIXED for Mobile */
+
 .hero {
   background: url("assets/banner.png") top center / contain no-repeat;
   width: 100%;
-  min-height: 450px; /* ✅ висота банера */
+  min-height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 20px 15px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  padding: 60px 20px 20px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  background-color: #e8f5e9; /* світлий фон якщо зображення не займає всю площу */
 }
+
 
 /* Hero Text */
 .hero h1 {
